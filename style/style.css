@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:root {
+	--secondary-bg-color: #008c9c;
+	--black: #000;ß
+}
+
 body {
     background-color: #798897;
 }
@@ -63,11 +68,12 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:hover + figure {
-	box-shadow: 0 0 .75em #008c9c;
+	box-shadow: 0 0 .75em var(--secondary-bg-color);
 }
 
 input[type="checkbox"]:checked + figure {
-	background-color: #008c9c;
+	background-color: var(--secondary-bg-color);
+	color: #fff;
 }
 
 figure {
@@ -94,7 +100,7 @@ a {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	background-color: #008c9c;
+	background-color: var(--secondary-bg-color);
 	color: #fff;
 	font-weight: bold;
 	float: left;
