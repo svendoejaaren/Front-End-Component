@@ -22,7 +22,7 @@ volgendeButton.addEventListener('click', (e) => {
     e.preventDefault()
     currentSection++
 
-    if (currentSection > 0 && currentSection < 2) {
+    if (currentSection === 1) {
         vorigeButton.classList.remove('backButton')
         section1.classList.remove('showForm')
         section2.classList.add('showForm')
@@ -30,13 +30,35 @@ volgendeButton.addEventListener('click', (e) => {
         p2.classList.add('page')
     }
 
-    if (currentSection > 1 && currentSection < 3) {
+    if (currentSection === 2) {
         section2.classList.remove('showForm')
         section3.classList.add('showForm')
         p2.classList.remove('page')
         p3.classList.add('page')
         volgendeButton.innerHTML = 'Registreer'
     }
+})
+
+vorigeButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    if (currentSection === 1) {
+        section2.classList.remove('showForm')
+        section1.classList.add('showForm')
+        p2.classList.remove('page')
+        p1.classList.add('page')
+        vorigeButton.classList.add('backButton')
+    }
+
+    if (currentSection === 2) {
+        volgendeButton.innerHTML = 'Volgende'
+        section3.classList.remove('showForm')
+        section2.classList.add('showForm')
+        p3.classList.remove('page')
+        p2.classList.add('page')
+    }
+
+    currentSection--
 })
 
 // API
