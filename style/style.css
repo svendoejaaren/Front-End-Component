@@ -6,7 +6,7 @@
 
 :root {
 	--secondary-bg-color: #008c9c;
-	--black: #000;ß
+	--black: #000;
 }
 
 body {
@@ -19,7 +19,6 @@ h1 {
 }
 
 form {
-	background-color: #da2222;
 	width: 20em;
 	margin: 2em auto;
 }
@@ -27,8 +26,10 @@ form {
 section {
 	width: 20em;
 	margin: 1em auto;
-	display: none;
 	height: 17.5em;
+	background-color: #da2222;
+	border: .1em solid var(--black);
+	padding-bottom: 18em;
 }
 
 h2 {
@@ -53,7 +54,7 @@ input[type="text"], input[type="password"], input[type="number"] {
 }
 
 section:last-of-type div {
-	width: 10em;
+	width: 9em;
 	float: left;
 	margin: 0;
 	text-align: inherit;
@@ -62,8 +63,8 @@ section:last-of-type div {
 input[type="checkbox"] {
 	cursor: pointer;
 	position: absolute;
-	height: 11em;
-	width: 12em;
+	height: 13em;
+	width: 10em;
 	opacity: 0;
 }
 
@@ -124,19 +125,20 @@ p {
     display: inline-flex;
 }
 
+
 /* Hidden classes for Javascript */
 .showForm {
-    display: block;
+    display: none;
 }
 
 .backButton {
     display: none;
 }
 
-.page {
-    background-color: #56423e;
+.currentPage {
+	background-color: #56423e;
 }
 
-.lastSection {
-    display: none;
+.noImg {
+	display: none;
 }

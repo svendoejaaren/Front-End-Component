@@ -9,13 +9,20 @@ const p4 = document.querySelector('p:last-of-type')
 const section3 = document.querySelector('section:last-of-type')
 const vorigeButton = document.querySelector('a:first-of-type')
 const volgendeButton = document.querySelector('a:last-of-type')
+const level1 = document.querySelector('section:last-of-type img')
+const level2 = document.querySelector(
+    'section:last-of-type div:last-of-type img'
+)
 
 let currentSection = 0
-section1.classList.add('showForm')
+section2.classList.add('showForm')
+section3.classList.add('showForm')
+level1.classList.add('noImg')
+level2.classList.add('noImg')
 
 if (currentSection === 0) {
     vorigeButton.classList.add('backButton')
-    p1.classList.add('page')
+    p1.classList.add('currentPage')
 }
 
 volgendeButton.addEventListener('click', (e) => {
@@ -24,17 +31,17 @@ volgendeButton.addEventListener('click', (e) => {
 
     if (currentSection === 1) {
         vorigeButton.classList.remove('backButton')
-        section1.classList.remove('showForm')
-        section2.classList.add('showForm')
-        p1.classList.remove('page')
-        p2.classList.add('page')
+        section2.classList.remove('showForm')
+        section1.classList.add('showForm')
+        p1.classList.remove('currentPage')
+        p2.classList.add('currentPage')
     }
 
     if (currentSection === 2) {
-        section2.classList.remove('showForm')
-        section3.classList.add('showForm')
-        p2.classList.remove('page')
-        p3.classList.add('page')
+        section3.classList.remove('showForm')
+        section2.classList.add('showForm')
+        p2.classList.remove('currentPage')
+        p3.classList.add('currentPage')
         volgendeButton.innerHTML = 'Registreer'
     }
 
@@ -47,19 +54,19 @@ vorigeButton.addEventListener('click', (e) => {
     e.preventDefault()
 
     if (currentSection === 1) {
-        section2.classList.remove('showForm')
-        section1.classList.add('showForm')
-        p2.classList.remove('page')
-        p1.classList.add('page')
+        section1.classList.remove('showForm')
+        section2.classList.add('showForm')
+        p2.classList.remove('currentPage')
+        p1.classList.add('currentPage')
         vorigeButton.classList.add('backButton')
     }
 
     if (currentSection === 2) {
         volgendeButton.innerHTML = 'Volgende'
-        section3.classList.remove('showForm')
-        section2.classList.add('showForm')
-        p3.classList.remove('page')
-        p2.classList.add('page')
+        section2.classList.remove('showForm')
+        section3.classList.add('showForm')
+        p3.classList.remove('currentPage')
+        p2.classList.add('currentPage')
     }
 
     currentSection--
