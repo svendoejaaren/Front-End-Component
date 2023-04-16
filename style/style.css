@@ -118,7 +118,7 @@ p {
     display: inline-flex;
 }
 
-/* Verborgen classes voor in Javascript */
+/* Hidden classes for Javascript */
 .showForm {
     display: block;
 }

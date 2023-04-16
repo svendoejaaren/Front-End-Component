@@ -37,6 +37,10 @@ volgendeButton.addEventListener('click', (e) => {
         p3.classList.add('page')
         volgendeButton.innerHTML = 'Registreer'
     }
+
+    if (currentSection === 3) {
+        location.replace('welkom.html')
+    }
 })
 
 vorigeButton.addEventListener('click', (e) => {
