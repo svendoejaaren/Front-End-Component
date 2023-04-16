@@ -20,9 +20,10 @@ form {
 }
 
 section {
-    width: 20em;
-    margin: 1em auto;
-    display: none;
+	width: 20em;
+	margin: 1em auto;
+	display: none;
+	height: 17.5em;
 }
 
 h2 {
@@ -36,7 +37,7 @@ label {
 	padding-bottom: 0.4em;
 }
 
-input {
+input[type="text"], input[type="password"], input[type="number"] {
 	width: 14em;
 	padding: .5em;
 	border: .05em solid #000;
@@ -46,12 +47,44 @@ input {
 	margin-bottom: 1em;
 }
 
+section:last-of-type div {
+	width: 10em;
+	float: left;
+	margin: 0;
+	text-align: inherit;
+}
+
+input[type="checkbox"] {
+	cursor: pointer;
+	position: absolute;
+	height: 11em;
+	width: 12em;
+	opacity: 0;
+}
+
+input[type="checkbox"]:hover + figure {
+	box-shadow: 0 0 .75em #008c9c;
+}
+
+input[type="checkbox"]:checked + figure {
+	background-color: #008c9c;
+}
+
 figure {
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 9em;
+	border: .1em solid #000;
+	margin: 1em;
+	border-radius: .5em;
+	transition: all 300ms ease;
 }
 
 figcaption {
 	text-align: center;
+	font-size: 1.5em;
 }
 
 a {
@@ -69,7 +102,7 @@ a {
 	text-align: center;
 }
 
-div {
+div:last-child {
     width: 20em;
     margin: 1.2em auto;
     text-align: center;

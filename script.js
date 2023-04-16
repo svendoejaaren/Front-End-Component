@@ -83,7 +83,7 @@ const fetchLevel1FightingPokemon = async () => {
                     document.querySelector(
                         'figure:first-of-type'
                     ).innerHTML += `
-            <img src="${singlePokemon.image}" alt="Fighting Pokemon"/>
+            <img src="${singlePokemon.image}" alt="Fighting level 1 Pokemon"/>
             `
                 })
         })
@@ -107,8 +107,10 @@ const fetchLevel2FightingPokemon = async () => {
                     const singlePokemon = {
                         image: data.sprites['front_default'],
                     }
-                    document.querySelector('figure:last-of-type').innerHTML += `
-            <img src="${singlePokemon.image}" alt="Fighting Pokemon"/>
+                    document.querySelector(
+                        'div:nth-of-type(2) figure'
+                    ).innerHTML += `
+            <img src="${singlePokemon.image}" alt="Fighting level 2 Pokemon"/>
             `
                 })
         })
