@@ -19,6 +19,7 @@ section2.classList.add('showForm')
 section3.classList.add('showForm')
 level1.classList.add('noImg')
 level2.classList.add('noImg')
+volgendeButton.innerHTML = 'Volgende'
 
 if (currentSection === 0) {
     vorigeButton.classList.add('backButton')
