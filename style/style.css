@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #798897;
+}
+
+h1 {
+	margin-top: 1em;
+	text-align: center;
+}
+
+form {
+	background-color: #da2222;
+	width: 20em;
+	margin: 2em auto;
+}
+
+section {
+    width: 20em;
+    margin: 1em auto;
+    display: none;
+}
+
+h2 {
+	padding: 1em;
+}
+
+label {
+	display: block;
+	font-size: 1.5em;
+	padding-left: .95em;
+	padding-bottom: 0.4em;
+}
+
+input {
+	width: 14em;
+	padding: .5em;
+	border: .05em solid #000;
+	margin-left: 1.2em;
+	font-size: 1.2em;
+	border-radius: .2em;
+	margin-bottom: 1em;
+}
+
+figure {
+	display: inline-block;
+}
+
+figcaption {
+	text-align: center;
+}
+
+a {
+	margin: 1.2em;
+	padding: .5em;
+	width: 6em;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #008c9c;
+	color: #fff;
+	font-weight: bold;
+	float: left;
+	text-decoration: none;
+	text-align: center;
+}
+
+div {
+    width: 20em;
+    margin: 1.2em auto;
+    text-align: center;
+    float: right;
+}
+
+p {
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    background-color: #fff;
+    margin: .1em .3em;
+    display: inline-flex;
+}
+
+/* Verborgen classes voor in Javascript */
+.showForm {
+    display: block;
+}
+
+.backButton {
+    display: none;
+}
+
+.page {
+    background-color: #56423e;
+}
+
+.lastSection {
+    display: none;
+}
